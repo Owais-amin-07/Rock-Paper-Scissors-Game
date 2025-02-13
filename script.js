@@ -73,4 +73,21 @@ choices.forEach((choice) => {
 });
 
 
+// Restarting the Game 
+const resetBtn = document.querySelector("#resetScore");
+
+resetBtn.addEventListener("click", () => {
+    // Reset scores to 0
+    userScore = 0;
+    compScore = 0;
+
+    // Update the displayed scores
+    document.querySelector("#userscore").innerText = userScore;
+    document.querySelector("#compscore").innerText = compScore;
+
+    // Reset the message to its initial state
+    msg.innerText = "Play your move";
+    msg.style.backgroundColor = "rgb(52, 69, 61)"; // Reset to the original background color
+});
+
 
